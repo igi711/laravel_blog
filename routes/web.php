@@ -38,11 +38,12 @@ Route::get('/', function () {
     return view('index', ['blog_posts' => $blog_posts]);
 });
 
+Route::get('/register', [HomeController::class, 'register'])->name('register');
+
 Route::get("/controller", [BlogController::class, 'index']);
 
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'home'])->name('home');
-
 
 

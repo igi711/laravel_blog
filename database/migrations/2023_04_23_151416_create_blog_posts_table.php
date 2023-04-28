@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Schema;
     {
         Schema::create('blog_posts', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
             $table->text('title');
             $table->text('body');
             $table->text('user_id');
